@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var ulCourtTypes = $('#ulCourtTypes');
+
+            $('#btn').click(function () {
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'api/CourtTypes',
+                    dataType: 'json',
+                    success: function (data) {
+                        ulCourtTypes.empty();
+                        $.each(data, function (index, courtType) {
+                            var full = courtType.Type + ' ' + courtType.Price;
+                            ulCourtTypes.append('<li>' + full  +  '</li>');
+                        });
+                    }
+                });
+            });
+            $('#btnClear').click(function () {
+                ulCourtTypes.empty();
+            });
+        
+
+            $('#addCourtTypeBtn').click(function () {
+                var id = $('#id').val();
+            var type = $('#type').val();
+            var price = $('#price').val();
+            
+            if (type != "" && price != "")
+            {
+                $.ajax({
+                    type: 'POST',
+                    url: 'api/CourtTypes',
+                    dataType: 'json',
+                    data:
+                    {
+                        Id: id,
+                        Type: type,
+                        Price: price
+                    },
+                    success: function (response) {
+                        alert("Court Type created");
+                    },
+                    error: function () {
+                        alert("Error");
+                    }
+                });
+            }
+            else { alert("All field required"); }
+            }); 
+
+            $('#btnDelete').click(function () {
+
+                var id = {};
+                id = $("#id_ct").val();
+
+
+                $.ajax({
+                    type: 'DELETE',
+                    url: 'api/CourtTypes/' + id,
+                    dataType: 'json',
+                    
+                    success: function (response) {
+                        alert("Court Type deleted");
+                    },
+                    error: function () {
+                        alert("Error");
+                    }
+                });
+            }); 
+
+        }); 
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="Get All Court Types" />
+    <input id="btnClear" type="button" value="Clear" />
+    <ul id="ulCourtTypes">
+    </ul>
+
+    <p>Add Court Type: </p>
+    <input id="id" type="number" placeholder="id" /><br />
+    <input id="type" type="text" placeholder="type" /><br />
+    <input id="price" type="text" placeholder="price" /> <br />
+    <input id="addCourtTypeBtn" type="button" value="Add Court Type" />
+
+
+    <p>Delete Court Type: </p>
+    <input id="id_ct" type="number" placeholder="id_ct" /><br />
+    <input id="btnDelete" type="button" value="Delete" />
+</body>
+</html>

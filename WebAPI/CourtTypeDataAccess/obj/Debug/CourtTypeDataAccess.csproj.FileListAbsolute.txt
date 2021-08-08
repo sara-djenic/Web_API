@@ -1,0 +1,12 @@
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\bin\Debug\CourtTypeDataAccess.dll.config
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\bin\Debug\CourtTypeDataAccess.dll
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\bin\Debug\CourtTypeDataAccess.pdb
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\obj\Debug\CourtTypeDataAccess.csprojAssemblyReference.cache
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\obj\Debug\CourtTypeDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\obj\Debug\CourtTypeDataAccess.csproj.CopyComplete
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\obj\Debug\CourtTypeDataAccess.dll
+C:\Users\Sara\source\repos\WebAPI\CourtTypeDataAccess\obj\Debug\CourtTypeDataAccess.pdb
